@@ -13,7 +13,7 @@ import java.util.List;
 public class Material
 {
 	private static final Logger logger = LoggerFactory.getLogger(Material.class);
-	private static final HashMap<Color, Material> materials = new HashMap<>();
+	private static final HashMap<String, Material> materials = new HashMap<>();
 
 	public final String name;
 	public final double strength;
@@ -26,17 +26,17 @@ public class Material
 		for (MaterialTemplate t : templates)
 		{
 			Color c = Color.valueOf(t.colour.toLowerCase().replace("#",""));
-			if (materials.get(c) != null)
+			if (materials.get(c.toString()) != null)
 				logger.warn("Failed to load material: The following materials colour already exists: " + t.toString());
 			else
 			{
-				materials.put(c, new Material(t.name, t.strength, t.mass, c, t.isHull));
+				materials.put(c.toString(), new Material(t.name, t.strength, t.mass, c, t.isHull));
 				logger.info("Created Material: " + t.toString());
 			}
 		}
 	}
 
-	public static Material fromColor(Color c)
+	public static Material fromColor(String c)
 	{
 		return materials.get(c);
 	}

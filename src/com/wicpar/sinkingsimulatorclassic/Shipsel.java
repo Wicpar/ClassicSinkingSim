@@ -56,4 +56,9 @@ public class Shipsel extends Physical implements IDrawable
 	{
 		return material;
 	}
+
+	public Color getColor()
+	{
+		return current;
+	}
 }
