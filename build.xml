@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+
+<project>
+
+    <property file="Plugin.properties"/>
+
+    <condition property="plugin.path" value="${user.home}/AppData/Roaming/.sinkingsimulator2">
+        <os family="windows"/>
+    </condition>
+    <condition property="plugin.path" value="${user.home}/Library/Application Support/.sinkingsimulator2">
+        <os family="unix"/>
+    </condition>
+
+    <path id="libs-classpath">
+        <fileset dir="libs">
+            <include name="*.jar"/>
+        </fileset>
+
+        <fileset dir="BaseLibs">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="manifest">
+        <manifest file="META-INF/MANIFEST.MF">
+            <attribute name="Plugin-Id" value="${plugin.id}"/>
+            <attribute name="Plugin-Class" value="${plugin.class}"/>
+            <attribute name="Plugin-Version" value="${plugin.version}"/>
+            <attribute name="Plugin-Provider" value="${plugin.provider}"/>
+            <attribute name="Plugin-Dependencies" value="${plugin.dependencies}"/>
+        </manifest>
+    </target>
+
+    <target name="clean" depends="manifest">
+        <delete dir="out"/>
+        <mkdir dir="out"/>
+        <mkdir dir="out/classes"/>
+        <mkdir dir="out/classes/META-INF"/>
+        <copydir src="META-INF" dest="out/classes/META-INF"/>
+        <mkdir dir="out/lib"/>
+        <copydir src="libs" dest="out/lib"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <javac srcdir="src" destdir="out/classes" classpathref="libs-classpath"/>
+    </target>
+
+    <target name="package" depends="compile">
+        <zip destfile="${plugin.path}/Plugins/${plugin.id}-${plugin.version}.zip" basedir="out"/>
+    </target>
+
+</project>
