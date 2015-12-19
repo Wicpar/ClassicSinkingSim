@@ -38,6 +38,11 @@ public class Main extends Plugin
 {
 	private static String PluginID;
 
+	public static String getPluginID()
+	{
+		return PluginID;
+	}
+
 	/**
 	 * Constructor to be used by plugin manager for plugin instantiation.
 	 * Your plugins have to provide constructor with this exact signature to
@@ -154,21 +159,21 @@ public class Main extends Plugin
 
 						while (iter < 100)
 						{
-							Shipsel s = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0")), xp, yp);
-							Shipsel t = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0")), xp + 1, yp);
-							Shipsel u = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0")), xp + 1, yp + 1);
-							Shipsel v = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0")), xp, yp + 1);
+							Shipsel s = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp, yp);
+							Shipsel t = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp + 1, yp);
+							Shipsel u = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp + 1, yp + 1);
+							Shipsel v = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp, yp + 1);
 							Base.getClassHandler().addClass(s);
 							Base.getClassHandler().addClass(t);
 							Base.getClassHandler().addClass(u);
 							Base.getClassHandler().addClass(v);
 
-							Spring a = new Spring(s, t);
-							Spring b = new Spring(t, u);
-							Spring c = new Spring(u, v);
-							Spring d = new Spring(v, s);
-							Spring e = new Spring(s, u);
-							Spring f = new Spring(t, v);
+							Spring a = new Spring(s, t, true);
+							Spring b = new Spring(t, u, true);
+							Spring c = new Spring(u, v, true);
+							Spring d = new Spring(v, s, true);
+							Spring e = new Spring(s, u, true);
+							Spring f = new Spring(t, v, true);
 							iter++;
 						}
 
