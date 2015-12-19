@@ -2,7 +2,6 @@ package com.wicpar.sinkingsimulatorclassic;
 
 import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
-import com.wicpar.wicparbase.physics.IForce;
 import com.wicpar.wicparbase.physics.system.Physical;
 import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
@@ -45,7 +44,7 @@ public class Shipsel extends Physical implements IDrawable
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-		GL11.glPointSize((float)Main.ClassicSinkingSim.getInstance().getCam().scaleSize(1));
+		GL11.glPointSize((float)Main.ClassicSinkingSim.getInstance().getCam().scaleSize(0.1));
 		GL11.glBegin(GL11.GL_POINTS);
 		GL11.glColor4f(current.r, current.g, current.b, current.a);
 		GL11.glVertex3d(cam.transformX(pos.x), cam.transformY(pos.y), 0);
@@ -53,8 +52,6 @@ public class Shipsel extends Physical implements IDrawable
 		GL11.glPointSize(1);
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
-
-
 	}
 
 	public Material getMaterial()

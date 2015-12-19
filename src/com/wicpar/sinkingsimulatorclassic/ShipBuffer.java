@@ -48,7 +48,7 @@ public class ShipBuffer
 		logger.info("Avaliable ships are: " + factories.keySet());
 	}
 
-	private static  Future<Ship> getNewShip(String Name)
+	private static Future<Ship> getNewShip(String Name)
 	{
 		ShipFactory f = factories.get(Name);
 		if (f == null)

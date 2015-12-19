@@ -264,7 +264,7 @@ public class Main extends Plugin
 		public void UpdateForces(double v)
 		{
 			final long window = Base.getRenderer().getWindow("Main");
-			final long speed = 20;
+			final long speed = 1000;
 			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_W) == 1)
 			{
 				cam.Translate(0, -v * speed);
