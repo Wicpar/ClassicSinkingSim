@@ -11,6 +11,7 @@ import com.wicpar.wicparbase.physics.system.Defaults.Gravity;
 import com.wicpar.wicparbase.physics.system.Physical;
 import com.wicpar.wicparbase.utils.plugins.Injector;
 import org.joml.Vector2d;
+import org.joml.Vector3d;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
@@ -28,6 +29,8 @@ import java.nio.IntBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.ExecutionException;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -138,7 +141,7 @@ public class Main extends Plugin
 
 					int button = (Integer) objects[1];
 					int action = (Integer) objects[2];
-					if (button == 0 && action == GLFW_PRESS)
+					if (button == 0 && action == 1)
 					{
 						final DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
 						final DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
@@ -147,7 +150,6 @@ public class Main extends Plugin
 						glfwGetCursorPos((Long) objects[0], x, y);
 						double xp = x.get(0);
 						double yp = y.get(0);
-						logger.info("spawned shipsel at " + xp + ";" + yp);
 						glfwGetWindowSize((Long) objects[0], w, h);
 						xp /= w.get(0);
 						yp /= h.get(0);
@@ -155,6 +157,7 @@ public class Main extends Plugin
 						yp = -yp * 2 + 1;
 						xp = cam.untransformX(xp);
 						yp = cam.untransformY(yp);
+						/*
 						int iter = 0;
 
 						while (iter < 100)
@@ -175,7 +178,11 @@ public class Main extends Plugin
 							Spring e = new Spring(s, u, true);
 							Spring f = new Spring(t, v, true);
 							iter++;
-						}
+
+							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
+						}*/
+
+						ShipBuffer.ScheduleShip("ship5.png", new Vector3d(xp, yp, 0));
 
 					}
 				} else if (i == GenericGLFW.onWindowSizeCallback)
@@ -217,6 +224,7 @@ public class Main extends Plugin
 			Base.getClassHandler().addClass(gravity);
 			Base.getClassHandler().addClass(this);
 
+			ShipBuffer.Init();
 
 			final long window = Base.getRenderer().getWindow("Main");
 			IntBuffer w = BufferUtils.createIntBuffer(1);
@@ -264,7 +272,7 @@ public class Main extends Plugin
 		public void UpdateForces(double v)
 		{
 			final long window = Base.getRenderer().getWindow("Main");
-			final long speed = 1000;
+			final long speed = 500;
 			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_W) == 1)
 			{
 				cam.Translate(0, -v * speed);
@@ -288,6 +296,13 @@ public class Main extends Plugin
 			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_SPACE) == 1)
 			{
 				ground.h += v * speed;
+			}
+			try
+			{
+				ShipBuffer.ReleaseShips();
+			} catch (Exception e)
+			{
+				logger.error("Failed to release ships",e);
 			}
 		}
 

@@ -1,15 +1,14 @@
 package com.wicpar.sinkingsimulatorclassic;
 
+import com.wicpar.wicparbase.mech.Base;
 import com.wicpar.wicparbase.mech.PVars;
+import com.wicpar.wicparbase.utils.ThreadPool;
 import org.joml.Vector3d;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -22,8 +21,7 @@ public class ShipBuffer
 	private static final HashMap<String, ShipFactory> factories = new HashMap<>();
 	private static volatile int maxGeneratedShips = 0;
 	private static final Logger logger = LoggerFactory.getLogger(ShipBuffer.class);
-	private static final List<ShipSpawnSchedule> toRelease = new LinkedList<>();
-	private static final List<Ship> rel = new LinkedList<>();
+	private static final List<Future<Ship>> toRelease = new LinkedList<>();
 
 	public static void Init()
 	{
@@ -48,19 +46,18 @@ public class ShipBuffer
 		logger.info("Avaliable ships are: " + factories.keySet());
 	}
 
-	private static Future<Ship> getNewShip(String Name)
+	private static Future<Ship> getNewShip(String Name, Vector3d pos)
 	{
 		ShipFactory f = factories.get(Name);
 		if (f == null)
 			return null;
 		else
-			return f.releaseNextShip();
+			return f.MakeNextShip(pos);
 	}
 
 	private static class ShipFactory
 	{
 		private final File model;
-		private List<Future<Ship>> ships = new ArrayList<>();
 
 		private final String name;
 
@@ -68,24 +65,11 @@ public class ShipBuffer
 		{
 			name = image.getName();
 			model = image;
-			/*
-			for (int i = 0; i < maxGeneratedShips; i++)
-			{
-				ships.add(ThreadPool.getExecutor().submit(() -> new Ship(model)));
-			}*/
-
 		}
 
-		public Future<Ship> releaseNextShip()
+		public Future<Ship> MakeNextShip(Vector3d pos)
 		{
-			/*
-			Future<Ship> s = ships.size() > 0 ? ships.remove(0) : ThreadPool.getExecutor().submit(() -> new Ship(model));
-			while (ships.size() < maxGeneratedShips)
-			{
-				ships.add(ThreadPool.getExecutor().submit(() -> new Ship(model)));
-			}
-			return s;*/
-			return null;
+			return ThreadPool.getExecutor().submit(() -> new Ship(model, pos));
 		}
 	}
 
@@ -98,29 +82,20 @@ public class ShipBuffer
 
 	public static void ScheduleShip(String ship, Vector3d pos)
 	{
-		//toRelease.add(new ShipSpawnSchedule(pos, getNewShip(ship)));
-		new Ship(factories.get(ship).model, pos);
+		toRelease.add(getNewShip(ship, pos));
 	}
 
 	public static void ReleaseShips() throws ExecutionException, InterruptedException
 	{
-		/*
-		for (ShipSpawnSchedule schedule : toRelease)
+		for (Iterator<Future<Ship>> iterator = toRelease.iterator(); iterator.hasNext(); )
 		{
-			if (schedule != null && schedule.ship.isDone() && schedule.ship.get() != null)
-				schedule.ship.get().Initialize(schedule.pos);
-		}*/
-	}
-
-	private static class ShipSpawnSchedule
-	{
-		private final Vector3d pos;
-		private final Future<Ship> ship;
-
-		public ShipSpawnSchedule(Vector3d pos, Future<Ship> ship)
-		{
-			this.pos = pos;
-			this.ship = ship;
+			Future<Ship> schedule = iterator.next();
+			Ship s;
+			if (schedule != null && schedule.isDone() && (s = schedule.get()) != null)
+			{
+				Base.getClassHandler().addClass(s);
+				iterator.remove();
+			}
 		}
 	}
 }

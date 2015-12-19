@@ -2,6 +2,7 @@ package com.wicpar.sinkingsimulatorclassic;
 
 import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
+import com.wicpar.wicparbase.mech.Base;
 import com.wicpar.wicparbase.physics.system.Physical;
 import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
@@ -32,6 +33,7 @@ public class Shipsel extends Physical implements IDrawable
 	{
 		super(new Vector3d(x,y,0), new Vector3d(vx, vy, 0), material.getMass());
 		this.material = material;
+		mass = genMass();
 	}
 
 	@Override
@@ -52,6 +54,31 @@ public class Shipsel extends Physical implements IDrawable
 		GL11.glPointSize(1);
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
+	}
+
+	@Override
+	public void UpdateForces(double v)
+	{
+		super.UpdateForces(v);
+		if (damaged && Main.ClassicSinkingSim.getInstance().getSea().getHeight(pos.x, Base.getTimePassed()) > pos.y + 0.5)
+		{
+			flooded = Math.min(flooded + (float) v / 2, 1);
+			mass = (float) genMass();
+		}
+	}
+
+	private double genMass()
+	{
+		return genMass(material, flooded);
+	}
+
+	private static double genMass(Material material, double flooded)
+	{
+		final double prop = 0.07;
+		double mass = (material.mass) * prop + (flooded * Sea.WaterD + (1 - flooded) * Sea.AirD) * (1 - prop);
+		if (mass == 0)
+			mass = 0.0001;
+		return mass;
 	}
 
 	public Material getMaterial()

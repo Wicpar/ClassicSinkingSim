@@ -2,6 +2,7 @@ package com.wicpar.sinkingsimulatorclassic;
 
 import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
+import com.wicpar.wicparbase.mech.Base;
 import com.wicpar.wicparbase.physics.IPhysical;
 import com.wicpar.wicparbase.physics.system.Force;
 import org.joml.Vector3d;
@@ -16,12 +17,12 @@ public class Sea extends Force implements IDrawable
 	private static final Color color = new Color(0, 0.25f, 1, 0.5f);
 	private int divisions = 1000;
 	private double[] heights = new double[divisions + 1];
-	private static double WaterD = 1025;
-	private static double AirD = 1.2922;
+	public static double WaterD = 1025;
+	public static double AirD = 1.2922;
 	private final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
 	private double wh = 1;
 	private double ww = 3;
-	private double time = System.nanoTime() / 1000000000d;
+	private double time = Base.getTimePassed();
 
 	public double getHeight(double x, double time)
 	{
@@ -36,12 +37,12 @@ public class Sea extends Force implements IDrawable
 		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		GL11.glDisable(GL11.GL_POLYGON_SMOOTH);
-		double time = System.nanoTime() / 1000000000d;
+		time = Base.getTimePassed();
 		GL11.glBegin(GL11.GL_QUAD_STRIP);
 		GL11.glColor4f(color.r, color.g, color.b, color.a);
 		for (int i = 0; i <= divisions; i++)
 		{
-			double pos = ((double) (i) / (divisions))*2-1;
+			double pos = ((double) (i) / (divisions)) * 2 - 1;
 			GL11.glVertex3d(pos, -1, -0.07);
 			GL11.glVertex3d(pos, cam.transformY(getHeight(cam.untransformX(pos), time)), -0.07);
 		}
@@ -52,7 +53,7 @@ public class Sea extends Force implements IDrawable
 		GL11.glColor4f(color.r, color.g, color.b, 1);
 		for (int i = 0; i <= divisions; i++)
 		{
-			double pos = ((double) (i) / (divisions))*2-1;
+			double pos = ((double) (i) / (divisions)) * 2 - 1;
 			GL11.glVertex3d(pos, cam.transformY(getHeight(cam.untransformX(pos), time)), -0.07);
 		}
 		GL11.glEnd();
@@ -71,25 +72,27 @@ public class Sea extends Force implements IDrawable
 	@Override
 	public boolean ApplyForce(IPhysical iPhysical, double v)
 	{
-		time = System.nanoTime() / 1000000000d;
+		final double airdamp = 0.1, waterdamp = 0.8;
+
+		time = Base.getTimePassed();
 		double h = getHeight(iPhysical.getPos().x, time);
 		double pos = iPhysical.getPos().y;
 		double submerged = pos - h;
-		Vector3d grav = new Vector3d(0,-9.81,0);
-		Vector3d grav2 =  new Vector3d(grav);
-		double a = Math.min(Math.max(0.5 - submerged,0), 1);
-		double b = Math.min(Math.max(submerged + 0.5,0), 1);
+		Vector3d grav = new Vector3d(0, -9.81, 0);
+		Vector3d grav2 = new Vector3d(grav);
+		double a = Math.min(Math.max(0.5 - submerged, 0), 1);
+		double b = Math.min(Math.max(submerged + 0.5, 0), 1);
 		grav.mul(-WaterD * a * v / iPhysical.getMass());
 		grav2.mul(-AirD * b * v / iPhysical.getMass());
 		iPhysical.getVel().add(grav);
 		iPhysical.getVel().add(grav2);
 		double damp;
 		if (a == 0)
-			damp = 0.1;
+			damp = airdamp;
 		else if (b == 0)
-			damp = 0.75;
+			damp = waterdamp;
 		else
-			damp = iPhysical.getVel().y > 0 ? 0.1:0.75;
+			damp = iPhysical.getVel().y > 0 ? airdamp : waterdamp;
 		Vector3d vel = new Vector3d(iPhysical.getVel());
 		iPhysical.getVel().sub(vel.mul(damp * v));
 		return false;

@@ -15,7 +15,7 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 
 	public Spring(Shipsel a, Shipsel b, boolean canDraw)
 	{
-		this(0.5, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 50000, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 10000, a, b, canDraw);
+		this(0.5, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 50000, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 100000, a, b, canDraw);
 	}
 
 	private Spring(double damping, double strength, double breakForce, Shipsel a, Shipsel b, boolean canDraw)
@@ -25,10 +25,17 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 		this.canDraw = canDraw;
 	}
 
+	public Spring(Spring la, Spring lb)
+	{
+		this((Shipsel)la.a, (Shipsel)lb.b, false);
+	}
+
 	@Override
 	public synchronized boolean ApplyForce(IPhysical physical, double delta)
 	{
-		super.ApplyForce(physical, delta);
+		boolean b = super.ApplyForce(physical, delta);
+		if (b)
+			return b;
 		boolean dispose = (breakForce < lastForce && canDraw);
 		if (dispose)
 			this.dispose();

@@ -74,7 +74,7 @@ public class Ship extends ClassPool implements IDrawable
 				}
 			}
 		}
-/*
+		/*
 		for (int i = 1; i < springs.length; i++)
 		{
 			if (springs[i] != null && springs[i - 1] != null && springs[i][0] != null && springs[i - 1][0] != null)
@@ -150,16 +150,15 @@ public class Ship extends ClassPool implements IDrawable
 					}
 				}
 			}
-		}
-		*/
+		}*/
 		name = image.getName();
 	}
 
 	@Override
 	public void UpdateClass(Updater updater, Class c, Object... params)
 	{
-		super.UpdateClass(updater, c, params);
-		if (c.isAssignableFrom(Shipsel.class))
+		//super.UpdateClass(updater, c, params);
+		if (c != null && c.isAssignableFrom(Shipsel.class))
 		{
 			for (int i = 0, shipselsLength = shipsels.length; i < shipselsLength; i++)
 			{
@@ -168,9 +167,9 @@ public class Ship extends ClassPool implements IDrawable
 					for (int i1 = 0, shipselLength = shipsel.length; i1 < shipselLength; i1++)
 					{
 						Shipsel shipsel1 = shipsel[i1];
-						if (shipsel1 != null)
+						if (shipsel1 != null && !shipsel1.isDisposed())
 							updater.Update(shipsel1, params);
-						if (shipsel1.isDisposed())
+						if (shipsel1 != null && shipsel1.isDisposed())
 							shipsel[i1] = null;
 					}
 			}
