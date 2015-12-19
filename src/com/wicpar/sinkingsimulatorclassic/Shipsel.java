@@ -2,6 +2,7 @@ package com.wicpar.sinkingsimulatorclassic;
 
 import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
+import com.wicpar.wicparbase.physics.IForce;
 import com.wicpar.wicparbase.physics.system.Physical;
 import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
@@ -37,6 +38,8 @@ public class Shipsel extends Physical implements IDrawable
 	@Override
 	public void draw()
 	{
+		forces.stream().filter(force -> force instanceof IDrawable).forEach(force -> ((IDrawable) force).draw());
+
 		current.set(material.colour.r * (1-flooded) + color.r*(flooded), material.colour.g * (1-flooded) + color.g*(flooded), material.colour.b * (1-flooded) + color.b*(flooded), material.colour.a * (1-flooded) + color.a*(flooded));
 		final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
@@ -50,6 +53,8 @@ public class Shipsel extends Physical implements IDrawable
 		GL11.glPointSize(1);
 		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glDisable(GL11.GL_DEPTH_TEST);
+
+
 	}
 
 	public Material getMaterial()

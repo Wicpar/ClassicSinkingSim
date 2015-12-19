@@ -29,7 +29,10 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	public synchronized boolean ApplyForce(IPhysical physical, double delta)
 	{
 		super.ApplyForce(physical, delta);
-		return (breakForce < lastForce);
+		boolean dispose = (breakForce < lastForce && canDraw);
+		if (dispose)
+			this.dispose();
+		return dispose;
 	}
 
 	@Override
