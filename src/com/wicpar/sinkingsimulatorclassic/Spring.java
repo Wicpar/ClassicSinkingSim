@@ -11,7 +11,7 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 
 	public Spring(Shipsel a, Shipsel b)
 	{
-		this(0.5, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()), Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 1000, a, b);
+		this(0.5, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 50000, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 1, a, b);
 	}
 
 	private Spring(double damping, double strength, double breakForce, Shipsel a, Shipsel b)
@@ -21,10 +21,9 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	}
 
 	@Override
-	public synchronized void ApplyForce(IPhysical physical, double delta)
+	public synchronized boolean ApplyForce(IPhysical physical, double delta)
 	{
 		super.ApplyForce(physical, delta);
-		if (breakForce < lastForce)
-			this.dispose();
+		return  (breakForce < lastForce);
 	}
 }
