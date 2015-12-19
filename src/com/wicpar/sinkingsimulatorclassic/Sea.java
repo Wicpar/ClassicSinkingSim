@@ -69,7 +69,7 @@ public class Sea extends Force implements IDrawable
 	}
 
 	@Override
-	public void ApplyForce(IPhysical iPhysical, double v)
+	public boolean ApplyForce(IPhysical iPhysical, double v)
 	{
 		time = System.nanoTime() / 1000000000d;
 		double h = getHeight(iPhysical.getPos().x, time);
@@ -92,6 +92,7 @@ public class Sea extends Force implements IDrawable
 			damp = iPhysical.getVel().y > 0 ? 0.1:0.75;
 		Vector3d vel = new Vector3d(iPhysical.getVel());
 		iPhysical.getVel().sub(vel.mul(damp * v));
+		return false;
 	}
 
 }
