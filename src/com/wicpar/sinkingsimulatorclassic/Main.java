@@ -2,21 +2,18 @@ package com.wicpar.sinkingsimulatorclassic;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.input.GenericGLFW;
 import com.wicpar.wicparbase.mech.Base;
 import com.wicpar.wicparbase.mech.PVars;
 import com.wicpar.wicparbase.physics.IDynamical;
 import com.wicpar.wicparbase.physics.system.Defaults.Gravity;
 import com.wicpar.wicparbase.physics.system.Physical;
-import com.wicpar.wicparbase.utils.ClassPool;
 import com.wicpar.wicparbase.utils.plugins.Injector;
 import org.joml.Vector2d;
 import org.joml.Vector3d;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.system.libffi.Closure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ro.fortsoft.pf4j.Extension;
@@ -31,8 +28,6 @@ import java.nio.IntBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.concurrent.ExecutionException;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -74,6 +69,8 @@ public class Main extends Plugin
 		private final Ground ground;
 		private final Sea sea;
 		private final Gravity gravity;
+
+		public static boolean keepDebugControl = true;
 
 		public ClassicSinkingSim()
 		{
@@ -135,30 +132,31 @@ public class Main extends Plugin
 		public void OnGamePostInit()
 		{
 
-			Base.getInputHandler().addInput((i, objects) -> {
-				if (i == GenericGLFW.onCursorPosCallback)
-				{
-				} else if (i == GenericGLFW.onMouseButtonCallback)
-				{
-
-					int button = (Integer) objects[1];
-					int action = (Integer) objects[2];
-					final DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
-					final DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
-					final IntBuffer w = BufferUtils.createIntBuffer(1);
-					final IntBuffer h = BufferUtils.createIntBuffer(1);
-					glfwGetCursorPos((Long) objects[0], x, y);
-					double xp = x.get(0);
-					double yp = y.get(0);
-					glfwGetWindowSize((Long) objects[0], w, h);
-					xp /= w.get(0);
-					yp /= h.get(0);
-					xp = xp * 2 - 1;
-					yp = -yp * 2 + 1;
-					xp = cam.untransformX(xp);
-					yp = cam.untransformY(yp);
-					if (button == 0 && action == 1)
+			if (keepDebugControl)
+				Base.getInputHandler().addInput((i, objects) -> {
+					if (i == GenericGLFW.onCursorPosCallback)
 					{
+					} else if (i == GenericGLFW.onMouseButtonCallback)
+					{
+
+						int button = (Integer) objects[1];
+						int action = (Integer) objects[2];
+						final DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
+						final DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
+						final IntBuffer w = BufferUtils.createIntBuffer(1);
+						final IntBuffer h = BufferUtils.createIntBuffer(1);
+						glfwGetCursorPos((Long) objects[0], x, y);
+						double xp = x.get(0);
+						double yp = y.get(0);
+						glfwGetWindowSize((Long) objects[0], w, h);
+						xp /= w.get(0);
+						yp /= h.get(0);
+						xp = xp * 2 - 1;
+						yp = -yp * 2 + 1;
+						xp = cam.untransformX(xp);
+						yp = cam.untransformY(yp);
+						if (button == 0 && action == 1)
+						{
 
 
 						/*
@@ -186,53 +184,53 @@ public class Main extends Plugin
 							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
 						}*/
 
-						ShipBuffer.ScheduleShip("ship.png", new Vector3d(xp, yp, 0));
+							ShipBuffer.ScheduleShip("ship.png", new Vector3d(xp, yp, 0));
 
-					}
-					if (button == 1 && action == 1)
-					{
-						final double[] buf = new double[2];
-						buf[0] = xp;
-						buf[1] = yp;
-						Base.getClassHandler().UpdateClass((o, objects1) -> {
-							Shipsel s = ((Shipsel)o);
-							if (s.getPos().distance(buf[0], buf[1], 0) < 1)
-								s.dispose();
-						}, Shipsel.class);
-					}
-				} else if (i == GenericGLFW.onWindowSizeCallback)
-				{
-					int x, y;
-					IntBuffer vp = BufferUtils.createIntBuffer(4);
-					GL11.glGetIntegerv(GL11.GL_VIEWPORT, vp);
-					GL11.glViewport(0, 0, x = (Integer) objects[1], y = (Integer) objects[2]);
-					cam.Translate(-(x - vp.get(2)) / 2., (y - vp.get(3)) / 2.);
-					cam.UpdateViewPort(x, y);
-					sea.setDivisions(x / 2);
-
-				} else if (i == GenericGLFW.onWindowPosCallback)
-				{
-					if (LastWPos == null)
-					{
-						LastWPos = new Vector2d((Integer) objects[1], (Integer) objects[2]);
-					} else
+						}
+						if (button == 1 && action == 1)
+						{
+							final double[] buf = new double[2];
+							buf[0] = xp;
+							buf[1] = yp;
+							Base.getClassHandler().UpdateClass((o, objects1) -> {
+								Shipsel s = ((Shipsel) o);
+								if (s.getPos().distance(buf[0], buf[1], 0) < 1)
+									s.dispose();
+							}, Shipsel.class);
+						}
+					} else if (i == GenericGLFW.onWindowSizeCallback)
 					{
 						int x, y;
-						cam.Translate((LastWPos.x - (x = (Integer) objects[1])), -(LastWPos.y - (y = (Integer) objects[2])));
-						LastWPos.set(x, y);
-					}
-				} else if (i == GenericGLFW.onKeyCallback)
-				{
-					if (((Integer) objects[1]) == GLFW.GLFW_KEY_P)
+						IntBuffer vp = BufferUtils.createIntBuffer(4);
+						GL11.glGetIntegerv(GL11.GL_VIEWPORT, vp);
+						GL11.glViewport(0, 0, x = (Integer) objects[1], y = (Integer) objects[2]);
+						cam.Translate(-(x - vp.get(2)) / 2., (y - vp.get(3)) / 2.);
+						cam.UpdateViewPort(x, y);
+						sea.setDivisions(x / 2);
+
+					} else if (i == GenericGLFW.onWindowPosCallback)
 					{
-						logger.info(" fps: " + 1 / Base.getDelta() + " Dynamicals Num: " + Stats.getClassCount(Physical.class));
+						if (LastWPos == null)
+						{
+							LastWPos = new Vector2d((Integer) objects[1], (Integer) objects[2]);
+						} else
+						{
+							int x, y;
+							cam.Translate((LastWPos.x - (x = (Integer) objects[1])), -(LastWPos.y - (y = (Integer) objects[2])));
+							LastWPos.set(x, y);
+						}
+					} else if (i == GenericGLFW.onKeyCallback)
+					{
+						if (((Integer) objects[1]) == GLFW.GLFW_KEY_P)
+						{
+							logger.info(" fps: " + 1 / Base.getDelta() + " Dynamicals Num: " + Stats.getClassCount(Physical.class));
+						}
+					} else if (i == GenericGLFW.onScrollCallback)
+					{
+						cam.Scale(Math.pow(1.1, (Double) objects[2]));
 					}
-				} else if (i == GenericGLFW.onScrollCallback)
-				{
-					cam.Scale(Math.pow(1.1, (Double) objects[2]));
-				}
-				return true;
-			});
+					return true;
+				});
 			Base.getClassHandler().addClass(sky);
 			Base.getClassHandler().addClass(ground);
 			Base.getClassHandler().addClass(sea);
@@ -317,7 +315,7 @@ public class Main extends Plugin
 				ShipBuffer.ReleaseShips();
 			} catch (Exception e)
 			{
-				logger.error("Failed to release ships",e);
+				logger.error("Failed to release ships", e);
 			}
 		}
 

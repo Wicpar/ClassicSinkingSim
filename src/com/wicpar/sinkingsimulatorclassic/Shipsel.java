@@ -12,30 +12,33 @@ import org.lwjgl.opengl.GL11;
  */
 public class Shipsel extends Physical implements IDrawable
 {
-	private static final Color color = new Color(0, 0.25f, 1, 1);
+	public static Color WaterColor = new Color(0, 0.25f, 1, 1);
 	private final Material material;
 	private boolean damaged = false;
 	private float flooded = 0;
 	private Color current = new Color();
+	private Ship parent;
+
 	public static double waterMassMul = 1;
 	public static float trans = 0.5f;
 
 
-	public Shipsel(Material material, double x, double y)
+	public Shipsel(Material material, double x, double y, Ship parent)
 	{
-		this(material,x,y,0,0);
+		this(material,x,y,0,0, parent);
 	}
 
-	public Shipsel(Material material)
+	public Shipsel(Material material, Ship parent)
 	{
-		this(material,0,0);
+		this(material,0,0, parent);
 	}
 
-	public Shipsel(Material material, double x, double y, double vx, double vy)
+	public Shipsel(Material material, double x, double y, double vx, double vy, Ship parent)
 	{
 		super(new Vector3d(x,y,0), new Vector3d(vx, vy, 0), material.getMass());
 		this.material = material;
 		mass = genMass();
+		this.parent = parent;
 	}
 
 	@Override
@@ -48,7 +51,7 @@ public class Shipsel extends Physical implements IDrawable
 	public void draw()
 	{
 		forces.stream().filter(force -> force instanceof IDrawable).forEach(force -> ((IDrawable) force).draw());
-		Color set = current.set(material.colour.r * (1 - flooded * trans) + color.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + color.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + color.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + color.a * (flooded * trans));
+		Color set = current.set(material.colour.r * (1 - flooded * trans) + WaterColor.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + WaterColor.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + WaterColor.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + WaterColor.a * (flooded * trans));
 		final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		GL11.glEnable(GL11.GL_BLEND);
@@ -124,4 +127,10 @@ public class Shipsel extends Physical implements IDrawable
 	{
 		return current;
 	}
+
+	public Ship getParent()
+	{
+		return parent;
+	}
+
 }

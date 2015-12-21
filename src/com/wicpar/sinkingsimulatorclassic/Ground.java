@@ -11,7 +11,7 @@ import org.lwjgl.opengl.GL11;
  */
 public class Ground implements IDrawable, IForce
 {
-	private static final Color color = new Color(0.5f, 0.5f, 0.5f, 1);
+	public static Color FloorColor = new Color(0.5f, 0.5f, 0.5f, 1);
 	public double h = -1000;
 
 
@@ -20,7 +20,7 @@ public class Ground implements IDrawable, IForce
 	{
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		GL11.glBegin(GL11.GL_QUADS);
-		GL11.glColor4f(color.r, color.g, color.b, color.a);
+		GL11.glColor4f(FloorColor.r, FloorColor.g, FloorColor.b, FloorColor.a);
 		double h = Main.ClassicSinkingSim.getInstance().getCam().transformY(this.h);
 		GL11.glVertex3d(-1, h, -0.8);
 		GL11.glVertex3d(-1, -1, -0.8);

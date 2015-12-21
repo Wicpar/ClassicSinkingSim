@@ -14,7 +14,7 @@ import org.lwjgl.opengl.GL11;
 public class Sea extends Force implements IDrawable
 {
 
-	private static final Color color = new Color(0, 0.25f, 1, 0.5f);
+	public static Color SeaColor = new Color(0, 0.25f, 1, 0.5f);
 	private int divisions = 1000;
 	private double[] heights = new double[divisions + 1];
 	public static double WaterD = 1025;
@@ -40,7 +40,7 @@ public class Sea extends Force implements IDrawable
 		GL11.glDisable(GL11.GL_POLYGON_SMOOTH);
 		time = Base.getTimePassed();
 		GL11.glBegin(GL11.GL_QUAD_STRIP);
-		GL11.glColor4f(color.r, color.g, color.b, color.a);
+		GL11.glColor4f(SeaColor.r, SeaColor.g, SeaColor.b, SeaColor.a);
 		for (int i = 0; i <= divisions; i++)
 		{
 			double pos = ((double) (i) / (divisions)) * 2 - 1;
@@ -51,7 +51,7 @@ public class Sea extends Force implements IDrawable
 		GL11.glEnable(GL11.GL_POLYGON_SMOOTH);
 		GL11.glLineWidth(2);
 		GL11.glBegin(GL11.GL_LINE_STRIP);
-		GL11.glColor4f(color.r, color.g, color.b, 1);
+		GL11.glColor4f(SeaColor.r, SeaColor.g, SeaColor.b, 1);
 		for (int i = 0; i <= divisions; i++)
 		{
 			double pos = ((double) (i) / (divisions)) * 2 - 1;

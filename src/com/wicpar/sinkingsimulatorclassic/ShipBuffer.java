@@ -19,7 +19,6 @@ public class ShipBuffer
 {
 	private static final String shipPath = PVars.GameFolder + File.separator + Main.getPluginID().split("-")[0] + File.separator + "ships";
 	private static final HashMap<String, ShipFactory> factories = new HashMap<>();
-	private static volatile int maxGeneratedShips = 0;
 	private static final Logger logger = LoggerFactory.getLogger(ShipBuffer.class);
 	private static final List<Future<Ship>> toRelease = new LinkedList<>();
 

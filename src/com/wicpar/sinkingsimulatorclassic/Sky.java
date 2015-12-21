@@ -9,14 +9,14 @@ import org.lwjgl.opengl.GL11;
  */
 public class Sky implements IDrawable
 {
-	private static final Color color = new Color(0.529f, 0.808f, 0.980f, 1);
+	public static Color SkyColor = new Color(0.529f, 0.808f, 0.980f, 1);
 	@Override
 	public void draw()
 	{
 
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		GL11.glBegin(GL11.GL_QUADS);
-		GL11.glColor4f(color.r, color.g, color.b, color.a);
+		GL11.glColor4f(SkyColor.r, SkyColor.g, SkyColor.b, SkyColor.a);
 		GL11.glVertex3d(-1, -1, -0.9);
 		GL11.glVertex3d(-1, 1, -0.9);
 		GL11.glVertex3d(1, 1, -0.9);

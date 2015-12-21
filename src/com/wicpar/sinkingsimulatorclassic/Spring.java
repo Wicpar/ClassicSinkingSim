@@ -16,9 +16,13 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	public static boolean showforce = false;
 	private final Shipsel a,b;
 
+	public static double strengthmul = 100000;
+	public static double resmul = 5000;
+	public static double resbase = 0;
+
 	public Spring(Shipsel a, Shipsel b, boolean canDraw)
 	{
-		this(0.5, Math.pow(100000,1), Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * 5000, a, b, canDraw);
+		this(0.5, strengthmul, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * resmul + resbase, a, b, canDraw);
 	}
 
 	private Spring(double damping, double strength, double breakForce, Shipsel a, Shipsel b, boolean canDraw)

@@ -66,7 +66,7 @@ public class Ship extends ClassPool implements IDrawable, IDynamical
 				Color.argb8888ToColor(c, texture.getRGB(x, y));
 				if (!c.equals(Color.WHITE) && Material.fromColor(c.toString()) != null)
 				{
-					Shipsel current = shipsels[y][x] = new Shipsel(Material.fromColor(c.toString()), x - texture.getWidth() / 2. + pos.x, -(y - texture.getHeight() / 2.) + pos.y);
+					Shipsel current = shipsels[y][x] = new Shipsel(Material.fromColor(c.toString()), x - texture.getWidth() / 2. + pos.x, -(y - texture.getHeight() / 2.) + pos.y, this);
 					Shipsel tmp = null;
 					if (x > 0 && (tmp = shipsels[y][x - 1]) != null)
 						springs[0][0][y][x - 1] = new Spring(tmp, current, true);
