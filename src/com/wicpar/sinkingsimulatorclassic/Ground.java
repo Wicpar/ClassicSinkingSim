@@ -36,7 +36,7 @@ public class Ground implements IDrawable, IForce
 		if (iPhysical.getPos().y < h)
 		{
 			iPhysical.getPos().y = h;
-			iPhysical.getVel().negate().mul(0.1);
+			iPhysical.setVel(iPhysical.getVel().negate().mul(0.1));
 		}
 		return false;
 	}

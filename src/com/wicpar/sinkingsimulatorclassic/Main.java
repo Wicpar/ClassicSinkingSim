@@ -9,12 +9,14 @@ import com.wicpar.wicparbase.mech.PVars;
 import com.wicpar.wicparbase.physics.IDynamical;
 import com.wicpar.wicparbase.physics.system.Defaults.Gravity;
 import com.wicpar.wicparbase.physics.system.Physical;
+import com.wicpar.wicparbase.utils.ClassPool;
 import com.wicpar.wicparbase.utils.plugins.Injector;
 import org.joml.Vector2d;
 import org.joml.Vector3d;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.system.libffi.Closure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ro.fortsoft.pf4j.Extension;
@@ -141,22 +143,24 @@ public class Main extends Plugin
 
 					int button = (Integer) objects[1];
 					int action = (Integer) objects[2];
+					final DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
+					final DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
+					final IntBuffer w = BufferUtils.createIntBuffer(1);
+					final IntBuffer h = BufferUtils.createIntBuffer(1);
+					glfwGetCursorPos((Long) objects[0], x, y);
+					double xp = x.get(0);
+					double yp = y.get(0);
+					glfwGetWindowSize((Long) objects[0], w, h);
+					xp /= w.get(0);
+					yp /= h.get(0);
+					xp = xp * 2 - 1;
+					yp = -yp * 2 + 1;
+					xp = cam.untransformX(xp);
+					yp = cam.untransformY(yp);
 					if (button == 0 && action == 1)
 					{
-						final DoubleBuffer x = BufferUtils.createDoubleBuffer(1);
-						final DoubleBuffer y = BufferUtils.createDoubleBuffer(1);
-						final IntBuffer w = BufferUtils.createIntBuffer(1);
-						final IntBuffer h = BufferUtils.createIntBuffer(1);
-						glfwGetCursorPos((Long) objects[0], x, y);
-						double xp = x.get(0);
-						double yp = y.get(0);
-						glfwGetWindowSize((Long) objects[0], w, h);
-						xp /= w.get(0);
-						yp /= h.get(0);
-						xp = xp * 2 - 1;
-						yp = -yp * 2 + 1;
-						xp = cam.untransformX(xp);
-						yp = cam.untransformY(yp);
+
+
 						/*
 						int iter = 0;
 
@@ -182,8 +186,19 @@ public class Main extends Plugin
 							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
 						}*/
 
-						ShipBuffer.ScheduleShip("ship5.png", new Vector3d(xp, yp, 0));
+						ShipBuffer.ScheduleShip("Titanic.png", new Vector3d(xp, yp, 0));
 
+					}
+					if (button == 1 && action == 1)
+					{
+						final double[] buf = new double[2];
+						buf[0] = xp;
+						buf[1] = yp;
+						Base.getClassHandler().UpdateClass((o, objects1) -> {
+							Shipsel s = ((Shipsel)o);
+							if (s.getPos().distance(buf[0], buf[1], 0) < 1)
+								s.dispose();
+						}, Shipsel.class);
 					}
 				} else if (i == GenericGLFW.onWindowSizeCallback)
 				{
@@ -272,7 +287,7 @@ public class Main extends Plugin
 		public void UpdateForces(double v)
 		{
 			final long window = Base.getRenderer().getWindow("Main");
-			final long speed = 500;
+			final long speed = 1000;
 			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_W) == 1)
 			{
 				cam.Translate(0, -v * speed);

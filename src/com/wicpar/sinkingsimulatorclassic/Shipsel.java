@@ -17,6 +17,7 @@ public class Shipsel extends Physical implements IDrawable
 	private boolean damaged = false;
 	private float flooded = 0;
 	private Color current = new Color();
+	public static double waterMassMul = 1;
 
 
 	public Shipsel(Material material, double x, double y)
@@ -37,11 +38,17 @@ public class Shipsel extends Physical implements IDrawable
 	}
 
 	@Override
+	public void UpdatePhysicals(double delta)
+	{
+		super.UpdatePhysicals(delta);
+	}
+
+	@Override
 	public void draw()
 	{
 		forces.stream().filter(force -> force instanceof IDrawable).forEach(force -> ((IDrawable) force).draw());
-
-		current.set(material.colour.r * (1-flooded) + color.r*(flooded), material.colour.g * (1-flooded) + color.g*(flooded), material.colour.b * (1-flooded) + color.b*(flooded), material.colour.a * (1-flooded) + color.a*(flooded));
+		final float trans = 0.5f;
+		Color set = current.set(material.colour.r * (1 - flooded * trans) + color.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + color.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + color.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + color.a * (flooded * trans));
 		final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
 		GL11.glEnable(GL11.GL_BLEND);
@@ -74,11 +81,38 @@ public class Shipsel extends Physical implements IDrawable
 
 	private static double genMass(Material material, double flooded)
 	{
-		final double prop = 0.07;
-		double mass = (material.mass) * prop + (flooded * Sea.WaterD + (1 - flooded) * Sea.AirD) * (1 - prop);
+		final double prop = material.name.equalsIgnoreCase("rope") ? 1 : material.isHull ? .1 : 0.07;
+		double fl = material.isHull ? Sea.WaterD * waterMassMul : (flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD) ;
+		double mass = (material.mass + material.mass * 10 * flooded) * prop + fl * (1 - prop);
+		mass *= 5;
 		if (mass == 0)
 			mass = 0.0001;
 		return mass;
+	}
+
+	public float getFlooded()
+	{
+		return flooded;
+	}
+
+	public void setFlooded(float flooded)
+	{
+		if (flooded < 0)
+			this.flooded = 0;
+		else if (flooded > 1)
+			this.flooded = 1;
+		else
+			this.flooded = flooded;
+	}
+
+	public boolean isDamaged()
+	{
+		return damaged;
+	}
+
+	public void setDamaged(boolean damaged)
+	{
+		this.damaged = damaged;
 	}
 
 	public Material getMaterial()

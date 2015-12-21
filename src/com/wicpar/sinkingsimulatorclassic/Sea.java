@@ -23,6 +23,7 @@ public class Sea extends Force implements IDrawable
 	private double wh = 1;
 	private double ww = 3;
 	private double time = Base.getTimePassed();
+	public static double buoyancyMul = 1;
 
 	public double getHeight(double x, double time)
 	{
@@ -72,7 +73,7 @@ public class Sea extends Force implements IDrawable
 	@Override
 	public boolean ApplyForce(IPhysical iPhysical, double v)
 	{
-		final double airdamp = 0.1, waterdamp = 0.8;
+		final double airdamp = 0.5, waterdamp = 2;
 
 		time = Base.getTimePassed();
 		double h = getHeight(iPhysical.getPos().x, time);
@@ -82,10 +83,10 @@ public class Sea extends Force implements IDrawable
 		Vector3d grav2 = new Vector3d(grav);
 		double a = Math.min(Math.max(0.5 - submerged, 0), 1);
 		double b = Math.min(Math.max(submerged + 0.5, 0), 1);
-		grav.mul(-WaterD * a * v / iPhysical.getMass());
-		grav2.mul(-AirD * b * v / iPhysical.getMass());
-		iPhysical.getVel().add(grav);
-		iPhysical.getVel().add(grav2);
+		grav.mul(-WaterD * a * 5 * buoyancyMul);
+		grav2.mul(-AirD * b * 5 * buoyancyMul);
+		iPhysical.applyForce(grav);
+		iPhysical.applyForce(grav2);
 		double damp;
 		if (a == 0)
 			damp = airdamp;
@@ -93,8 +94,7 @@ public class Sea extends Force implements IDrawable
 			damp = waterdamp;
 		else
 			damp = iPhysical.getVel().y > 0 ? airdamp : waterdamp;
-		Vector3d vel = new Vector3d(iPhysical.getVel());
-		iPhysical.getVel().sub(vel.mul(damp * v));
+		iPhysical.applyForce(new Vector3d(iPhysical.getVel()).mul(-damp * iPhysical.getMass()));
 		return false;
 	}
 
