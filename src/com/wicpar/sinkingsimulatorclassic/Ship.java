@@ -22,6 +22,7 @@ public class Ship extends ClassPool implements IDrawable, IDynamical
 	private final String name;
 	private final BufferedImage texture;
 	private int subsprings = 4;
+	public static float fluidmul = 2;
 
 	private Ship(Shipsel[][] shipsels, Spring[][][][] springs, String name, BufferedImage texture)
 	{
@@ -69,12 +70,41 @@ public class Ship extends ClassPool implements IDrawable, IDynamical
 					Shipsel tmp = null;
 					if (x > 0 && (tmp = shipsels[y][x - 1]) != null)
 						springs[0][0][y][x - 1] = new Spring(tmp, current, true);
+					else if (!current.getMaterial().isHull)
+						current.setDamaged(true);
 					if (y > 0 && x > 0 && (tmp = shipsels[y - 1][x - 1]) != null)
 						springs[0][1][y - 1][x - 1] = new Spring(tmp, current, true);
 					if (y > 0 && (tmp = shipsels[y - 1][x]) != null)
 						springs[0][2][y - 1][x] = new Spring(tmp, current, true);
+					else if (!current.getMaterial().isHull)
+						current.setDamaged(true);
 					if (y > 0 && x < shipsels[0].length - 1 && (tmp = shipsels[y - 1][x + 1]) != null)
 						springs[0][3][y - 1][x] = new Spring(tmp, current, true);
+				}
+			}
+		}
+
+		for (int y = 0; y < texture.getHeight(); y++)
+		{
+			for (int x = 0; x < texture.getWidth(); x++)
+			{
+				Color c = new Color();
+				Color.argb8888ToColor(c, texture.getRGB(x, y));
+				if (!c.equals(Color.WHITE) && Material.fromColor(c.toString()) != null)
+				{
+					Shipsel current = shipsels[y][x];
+					Shipsel tmp = null;
+					if (y >= shipsels.length - 1 || (tmp = shipsels[y + 1][x]) == null)
+					{
+						if (!current.getMaterial().isHull)
+							current.setDamaged(true);
+					}
+
+					if (x >= shipsels[y].length - 1 || (tmp = shipsels[y][x + 1]) == null)
+					{
+						if (!current.getMaterial().isHull)
+							current.setDamaged(true);
+					}
 				}
 			}
 		}
@@ -181,22 +211,22 @@ public class Ship extends ClassPool implements IDrawable, IDynamical
 								int done = 0;
 								if (x > 0 && (tmp = shipsels[y][x - 1]) != null)
 								{
-									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top));
+									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top * fluidmul));
 									++done;
 								}
-								if (y < shipsels[0].length && (tmp = shipsels[y + 1][x]) != null)
+								if (y < shipsels.length - 1 && (tmp = shipsels[y + 1][x]) != null)
 								{
-									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top));
+									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top * fluidmul));
 									++done;
 								}
 								if (y > 0 && (tmp = shipsels[y - 1][x]) != null)
 								{
-									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * 0.1 * top));
+									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * 0.1 * top * fluidmul));
 									++done;
 								}
 								if (x < shipsels[y].length - 1 && (tmp = shipsels[y][x + 1]) != null)
 								{
-									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top));
+									tmp.setFlooded((float) (tmp.getFlooded() + flood * delta * top * fluidmul));
 									++done;
 								}
 							}

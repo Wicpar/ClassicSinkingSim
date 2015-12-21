@@ -126,7 +126,6 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	public void dispose()
 	{
 		super.dispose();
-		System.out.println(this);
 	}
 
 	@Override

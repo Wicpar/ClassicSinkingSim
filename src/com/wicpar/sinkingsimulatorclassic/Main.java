@@ -186,7 +186,7 @@ public class Main extends Plugin
 							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
 						}*/
 
-						ShipBuffer.ScheduleShip("Titanic.png", new Vector3d(xp, yp, 0));
+						ShipBuffer.ScheduleShip("ship.png", new Vector3d(xp, yp, 0));
 
 					}
 					if (button == 1 && action == 1)

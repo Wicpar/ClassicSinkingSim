@@ -18,6 +18,7 @@ public class Shipsel extends Physical implements IDrawable
 	private float flooded = 0;
 	private Color current = new Color();
 	public static double waterMassMul = 1;
+	public static float trans = 0.5f;
 
 
 	public Shipsel(Material material, double x, double y)
@@ -47,7 +48,6 @@ public class Shipsel extends Physical implements IDrawable
 	public void draw()
 	{
 		forces.stream().filter(force -> force instanceof IDrawable).forEach(force -> ((IDrawable) force).draw());
-		final float trans = 0.5f;
 		Color set = current.set(material.colour.r * (1 - flooded * trans) + color.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + color.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + color.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + color.a * (flooded * trans));
 		final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
 		GL11.glEnable(GL11.GL_DEPTH_TEST);
