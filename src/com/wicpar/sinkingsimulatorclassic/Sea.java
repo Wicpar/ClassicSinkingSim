@@ -23,7 +23,7 @@ public class Sea extends Force implements IDrawable
 	private double wh = 1;
 	private double ww = 3;
 	private double time = Base.getTimePassed();
-	public static double buoyancyMul = 1;
+	public static double buoyancyMul = 1.5;
 
 	public double getHeight(double x, double time)
 	{

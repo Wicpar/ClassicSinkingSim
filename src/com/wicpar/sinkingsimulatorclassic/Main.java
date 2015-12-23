@@ -28,6 +28,7 @@ import java.nio.IntBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -184,7 +185,7 @@ public class Main extends Plugin
 							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
 						}*/
 
-							ShipBuffer.ScheduleShip("ship.png", new Vector3d(xp, yp, 0));
+							ShipBuffer.ScheduleShip(ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size())), new Vector3d(xp, yp, 0));
 
 						}
 						if (button == 1 && action == 1)
@@ -286,29 +287,32 @@ public class Main extends Plugin
 		{
 			final long window = Base.getRenderer().getWindow("Main");
 			final long speed = 1000;
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_W) == 1)
+			if (keepDebugControl)
 			{
-				cam.Translate(0, -v * speed);
-			}
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_S) == 1)
-			{
-				cam.Translate(0, v * speed);
-			}
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_A) == 1)
-			{
-				cam.Translate(v * speed, 0);
-			}
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_D) == 1)
-			{
-				cam.Translate(-v * speed, 0);
-			}
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_LEFT_SHIFT) == 1)
-			{
-				ground.h -= v * speed;
-			}
-			if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_SPACE) == 1)
-			{
-				ground.h += v * speed;
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_W) == 1)
+				{
+					cam.Translate(0, -v * speed);
+				}
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_S) == 1)
+				{
+					cam.Translate(0, v * speed);
+				}
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_A) == 1)
+				{
+					cam.Translate(v * speed, 0);
+				}
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_D) == 1)
+				{
+					cam.Translate(-v * speed, 0);
+				}
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_LEFT_SHIFT) == 1)
+				{
+					ground.h -= v * speed;
+				}
+				if (GLFW.glfwGetKey(window, GLFW.GLFW_KEY_SPACE) == 1)
+				{
+					ground.h += v * speed;
+				}
 			}
 			try
 			{

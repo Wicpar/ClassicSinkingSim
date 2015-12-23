@@ -16,8 +16,8 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	public static boolean showforce = false;
 	private final Shipsel a,b;
 
-	public static double strengthmul = 100000;
-	public static double resmul = 5000;
+	public static double strengthmul = 200000;
+	public static double resmul = 10000;
 	public static double resbase = 0;
 
 	public Spring(Shipsel a, Shipsel b, boolean canDraw)

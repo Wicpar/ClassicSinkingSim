@@ -19,7 +19,7 @@ public class Shipsel extends Physical implements IDrawable
 	private Color current = new Color();
 	private Ship parent;
 
-	public static double waterMassMul = 1;
+	public static double waterMassMul = 5;
 	public static float trans = 0.5f;
 
 
@@ -85,7 +85,7 @@ public class Shipsel extends Physical implements IDrawable
 	private static double genMass(Material material, double flooded)
 	{
 		final double prop = material.name.equalsIgnoreCase("rope") ? 1 : material.isHull ? .1 : 0.07;
-		double fl = material.isHull ? Sea.WaterD * waterMassMul : (flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD) ;
+		double fl = material.isHull ? Math.max(Sea.WaterD,(flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD)) : (flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD) ;
 		double mass = (material.mass + material.mass * 10 * flooded) * prop + fl * (1 - prop);
 		mass *= 5;
 		if (mass == 0)
