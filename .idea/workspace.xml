@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Plugin.zip" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="becd9f5b-cbc6-4087-8d44-3d7a0e5756ed" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/ClassicSinkingSim API.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/ClassicSinkingSimAPI.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClassicSinkingSim.iml" afterPath="$PROJECT_DIR$/ClassicSinkingSim.iml" />
+    </list>
+    <ignored path="Test-Plugin-PF4J.iws" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Frederic\Desktop\Test-Plugin-PF4J\exportToHTML" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Test-Plugin-PF4J" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Sea.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="287" column="36" selection-start-line="287" selection-start-column="36" selection-end-line="287" selection-end-column="36" />
+              <folding>
+                <element signature="method#OnHandlerPreInit#0;class#ClassicSinkingSim#0;class#Main#0" expanded="false" />
+                <element signature="class#2997:3058" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ground.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ground.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shipsel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sky.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sky.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spring.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="183" selection-start-line="68" selection-start-column="183" selection-end-line="68" selection-end-column="183" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipBuffer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plugin.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3557126">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../Sinking Simulator 2" value="5731577760377" />
+        <entry key="$PROJECT_DIR$/../Sinking Simulator 2 bêta" value="5739672279943" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ants/build.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/com/yourdomain/yourpackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/SinkingSimulator2.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/GenericGLFW.java" />
+        <option value="$PROJECT_DIR$/Plugin.properties" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/test/Particle.java" />
+        <option value="$PROJECT_DIR$/src/Sea.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Camera.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/PointMass.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ThreadUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipJoint.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Gravity.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Injector.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/PhysUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/PhysicsHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/IWorldForce.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/CustomWorld.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Stats.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Material.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sky.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ground.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1924" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15466449" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Test-Plugin-PF4J/out/classes/META-INF/MANIFEST.MF" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Frederic\Documents\IntelliJ Idea Projects\ClassicSinkingSim\libs" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frederic\Documents\IntelliJ Idea Projects\ClassicSinkingSim\BaseLibs" />
+      <recent name="C:\Users\Frederic\Desktop\Test-Plugin-PF4J" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wicpar.sinkingsimulatorclassic" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frederic\Desktop\ClassicSinkingSim\ClassicSinkingSim\BaseLibs" />
+      <recent name="C:\Users\Frederic\Documents\IntelliJ Idea Projects\ClassicSinkingSim\BaseLibs" />
+      <recent name="C:\Users\Frederic\Desktop\Test-Plugin-PF4J\BaseLibs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR Application.TestPlugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AntRunConfiguration" factoryName="Ant Target">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/libs/json-20150729.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Frederic\Desktop\Test-Plugin-PF4J" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassicSinkingSim" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="package" type="AntRunConfiguration" factoryName="Ant Target">
+      <antsettings antfile="file://$PROJECT_DIR$/build.xml" target="package" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestPlugin" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/BaseLibs/WicparBase.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Frederic\Desktop\Test-Plugin-PF4J" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="package" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ClassicSinkingSimAPI" />
+        </option>
+      </method>
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Ant Target.package" />
+      <item index="1" class="java.lang.String" itemvalue="JAR Application.TestPlugin" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="becd9f5b-cbc6-4087-8d44-3d7a0e5756ed" name="Default" comment="" />
+      <created>1443182177267</created>
+      <option name="number" value="Default" />
+      <updated>1443182177267</updated>
+    </task>
+    <task id="LOCAL-00001" summary="adapted the project to the new engine version">
+      <created>1450503732196</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1450503732196</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adapted the project to the new engine version">
+      <created>1450503755320</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1450503755320</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Remade the ship class">
+      <created>1450506006644</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1450506006644</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Remade the ship class">
+      <created>1450506067170</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1450506067170</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remade the ShipBuffer class">
+      <created>1450506387627</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1450506387627</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remade the ShipBuffer class">
+      <created>1450545222360</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1450545222360</updated>
+    </task>
+    <task id="LOCAL-00007" summary="remade the ShipBuffer class">
+      <created>1450546627316</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1450546627316</updated>
+    </task>
+    <task id="LOCAL-00008" summary="tweaked physics">
+      <created>1450565951769</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1450565951769</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tweaked physics">
+      <created>1450664909518</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1450664909518</updated>
+    </task>
+    <task id="LOCAL-00010" summary="tweaked physics">
+      <created>1450666873922</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1450666873922</updated>
+    </task>
+    <task id="LOCAL-00011" summary="made the mod more modding capable">
+      <created>1450725411547</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1450725411547</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16433942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39801544" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adapted the project to the new engine version" />
+    <MESSAGE value="Remade the ship class" />
+    <MESSAGE value="remade the ShipBuffer class" />
+    <MESSAGE value="tweaked physics" />
+    <MESSAGE value="made the mod more modding capable" />
+    <option name="LAST_COMMIT_MESSAGE" value="made the mod more modding capable" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="manifest" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="compile" isVisible="false" />
+        <filter targetName="package" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sky.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="234" column="57" selection-start-line="234" selection-start-column="57" selection-end-line="234" selection-end-column="57" />
+          <folding>
+            <element signature="method#OnHandlerPreInit#0;class#ClassicSinkingSim#0;class#Main#0" expanded="false" />
+            <element signature="class#2997:3058" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassicSinkingSim.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassicSinkingSim.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/ant.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/ro_fortsoft_pf4j_pf4j_0_10_0.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/WicparBase.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/nio/Buffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3623446">
+          <caret line="217" column="24" selection-start-line="217" selection-start-column="24" selection-end-line="217" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/JOML-master.zip!/JOML-master/src/org/joml/MatrixStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78507996">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/JOML-master.zip!/JOML-master/src/org/joml/Matrix4d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321492">
+          <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/JOML-master.zip!/JOML-master/src/org/joml/Vector4d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93605685">
+          <caret line="407" column="19" selection-start-line="407" selection-start-column="19" selection-end-line="407" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/io/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8152753">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.84547067">
+          <caret line="443" column="22" selection-start-line="443" selection-start-column="22" selection-end-line="443" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="999" column="19" selection-start-line="999" selection-start-column="19" selection-end-line="999" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/io/PrintWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5133215">
+          <caret line="457" column="9" selection-start-line="457" selection-start-column="9" selection-end-line="457" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/nio/file/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.39253998">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2979" column="40" selection-start-line="2979" selection-start-column="40" selection-end-line="2979" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321492">
+          <caret line="477" column="18" selection-start-line="477" selection-start-column="18" selection-end-line="477" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/BaseLibs/java-semver-0.9.0.jar!/com/github/zafarkhaja/semver/Version.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3233082">
+          <caret line="153" column="30" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/JOML-master.zip!/JOML-master/src/org/joml/Vector3d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33278418">
+          <caret line="740" column="20" selection-start-line="740" selection-start-column="20" selection-end-line="740" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/JOML-master.zip!/JOML-master/src/org/joml/Vector2d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_65/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33278418">
+          <caret line="952" column="0" selection-start-line="952" selection-start-column="0" selection-end-line="952" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/lang/Class.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778">
+          <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/util/function/Consumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2361111">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassicSinkingSim.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09714286">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="40" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/util/concurrent/Future.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3877193">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/lang/StrictMath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3508772">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/lang/Math.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38070175">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="183" selection-start-line="68" selection-start-column="183" selection-end-line="68" selection-end-column="183" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sky.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="287" column="36" selection-start-line="287" selection-start-column="36" selection-end-line="287" selection-end-column="36" />
+          <folding>
+            <element signature="method#OnHandlerPreInit#0;class#ClassicSinkingSim#0;class#Main#0" expanded="false" />
+            <element signature="class#2997:3058" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3557126">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>ClassicSinkingSimAPI</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lwjgl</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ClassicSinkingSim</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>ro.fortsoft.pf4j:pf4j:0.10.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
