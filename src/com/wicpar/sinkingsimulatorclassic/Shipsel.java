@@ -73,8 +73,8 @@ public class Shipsel extends Physical implements IDrawable
 		if (damaged && Main.ClassicSinkingSim.getInstance().getSea().getHeight(pos.x, Base.getTimePassed()) > pos.y + 0.5)
 		{
 			flooded = Math.min(flooded + (float) v / 2, 1);
-			mass = (float) genMass();
 		}
+		mass = (float) genMass();
 	}
 
 	private double genMass()
@@ -85,7 +85,7 @@ public class Shipsel extends Physical implements IDrawable
 	private static double genMass(Material material, double flooded)
 	{
 		final double prop = material.name.equalsIgnoreCase("rope") ? 1 : material.isHull ? .1 : 0.07;
-		double fl = material.isHull ? Math.max(Sea.WaterD,(flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD)) : (flooded * Sea.WaterD * waterMassMul + (1 - flooded) * Sea.AirD) ;
+		double fl = material.isHull ? Math.max(Sea.WaterD * Sea.buoyancyMul,(flooded * Sea.WaterD * Sea.buoyancyMul * waterMassMul + (1 - flooded) * Sea.AirD)) : (flooded * Sea.WaterD * Sea.buoyancyMul * waterMassMul + (1 - flooded) * Sea.AirD) ;
 		double mass = (material.mass + material.mass * 10 * flooded) * prop + fl * (1 - prop);
 		mass *= 5;
 		if (mass == 0)

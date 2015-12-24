@@ -64,7 +64,7 @@ public class Main extends Plugin
 		private final Logger logger = LoggerFactory.getLogger(ClassicSinkingSim.class);
 		private Vector2d LastWPos = new Vector2d();
 		private final Camera cam = new Camera();
-		private static final String dataFolder = PVars.BaseModsFolder.concat("/").concat(Main.PluginID).concat("/data");
+		private static final String dataFolder = PVars.GameFolder.concat("/").concat(Main.PluginID.split("-")[0]).concat("/data");
 
 		private final Sky sky;
 		private final Ground ground;
@@ -89,7 +89,7 @@ public class Main extends Plugin
 			File f = new File(dataFolder);
 			if (!f.exists())
 				f.mkdirs();
-			f = new File(dataFolder + "/materials.json");
+			f = new File(dataFolder, "materials.json");
 			if (!f.exists())
 			{
 				try
@@ -103,13 +103,13 @@ public class Main extends Plugin
 					logger.error("Failed to create defaults", e);
 				}
 			}
-			byte[] encoded = new byte[0];
+			byte[] encoded;
 			try
 			{
 				encoded = Files.readAllBytes(Paths.get(f.getPath()));
-				Material.loadFromTemplateList((ArrayList<Material.MaterialTemplate>) (new Gson().fromJson(new String(encoded), new TypeToken<ArrayList<Material.MaterialTemplate>>()
+				Material.loadFromTemplateList(new Gson().fromJson(new String(encoded), new TypeToken<ArrayList<Material.MaterialTemplate>>()
 				{
-				}.getType())));
+				}.getType()));
 			} catch (IOException e)
 			{
 				logger.error("Failed to load materials", e);

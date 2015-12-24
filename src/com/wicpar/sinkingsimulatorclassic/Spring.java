@@ -16,13 +16,13 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 	public static boolean showforce = false;
 	private final Shipsel a,b;
 
-	public static double strengthmul = 200000;
+	public static double strengthmul = 200;
 	public static double resmul = 10000;
 	public static double resbase = 0;
 
 	public Spring(Shipsel a, Shipsel b, boolean canDraw)
 	{
-		this(0.5, strengthmul, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()) * resmul + resbase, a, b, canDraw);
+		this(0.5, 1000, Math.min(a.getMaterial().getStrength(), b.getMaterial().getStrength()), a, b, canDraw);
 	}
 
 	private Spring(double damping, double strength, double breakForce, Shipsel a, Shipsel b, boolean canDraw)
@@ -57,6 +57,8 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 			velB = new Vector3d(b.getVel());
 		}
 		stretch = posA.distance(posB) - dst;
+		double breakForce = this.breakForce  * resmul + resbase;
+		double stiffness = this.stiffness * strengthmul;
 		Vector3d norm = new Vector3d(posA).sub(posB).normalize();
 		Vector3d x = new Vector3d(norm).mul(stretch > 0 ? stretch * stiffness : stretch * stiffness);
 		lastForce = stretch * stiffness;
@@ -92,6 +94,7 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 			GL11.glLineWidth((float) Main.ClassicSinkingSim.getInstance().getCam().scaleSize(0.1));
 			GL11.glBegin(GL11.GL_LINES);
+			double breakForce = this.breakForce  * resmul + resbase;
 			float rat = (float) (lastForce / breakForce);
 			if (showforce)
 			{
