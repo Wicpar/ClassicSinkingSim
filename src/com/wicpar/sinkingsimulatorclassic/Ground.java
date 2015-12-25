@@ -4,6 +4,7 @@ import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
 import com.wicpar.wicparbase.physics.IForce;
 import com.wicpar.wicparbase.physics.IPhysical;
+import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
 
 /**
@@ -35,8 +36,13 @@ public class Ground implements IDrawable, IForce
 	{
 		if (iPhysical.getPos().y < h)
 		{
-			iPhysical.getPos().y = h;
-			iPhysical.setVel(iPhysical.getVel().negate().mul(0.1));
+			Vector3d tmp = iPhysical.getPos();
+			tmp.y = h;
+			iPhysical.setPos(tmp);
+			tmp = iPhysical.getVel();
+			if (tmp.y < 0)
+				tmp.y = -tmp.y / 2;
+			iPhysical.setVel(tmp);
 		}
 		return false;
 	}
