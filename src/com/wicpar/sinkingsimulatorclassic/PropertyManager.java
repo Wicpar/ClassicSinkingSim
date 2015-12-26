@@ -22,9 +22,15 @@ public class PropertyManager
 	 */
 	public static boolean RegisterProperty(String s, Number number, boolean force)
 	{
-		if (!force && properties.containsKey(s))
-			return false;
-		properties.put(s, new Property(number));
+		if (properties.containsKey(s))
+		{
+			if (!force)
+				return false;
+			else
+				properties.get(s).def = number;
+		}
+		else
+			properties.put(s, new Property(number));
 		return true;
 	}
 
@@ -42,7 +48,7 @@ public class PropertyManager
 	public static class Property
 	{
 		private Number value;
-		private final Number def;
+		private Number def;
 		private final LinkedList<PropertyChangeCallback> callbacks = new LinkedList<>();
 
 		public Property(Number value)
