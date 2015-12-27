@@ -9,7 +9,7 @@ import org.lwjgl.opengl.GL11;
 /**
  * Created by Frederic on 15/10/2015 at 20:13.
  */
-public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring implements IDrawable
+public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 {
 	private final double breakForce;
 	private final boolean canDraw;
@@ -81,42 +81,24 @@ public class Spring extends com.wicpar.wicparbase.physics.system.Defaults.Spring
 		return false;
 	}
 
-	@Override
-	public void draw()
+	public double getBreakForce()
 	{
-		if (canDraw && !isDisposed())
-		{
-			Color acol = ((Shipsel)a).getColor();
-			Color bcol = ((Shipsel)b).getColor();
-			Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
-			GL11.glEnable(GL11.GL_DEPTH_TEST);
-			GL11.glEnable(GL11.GL_BLEND);
-			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-			GL11.glLineWidth((float) Main.ClassicSinkingSim.getInstance().getCam().scaleSize(0.1));
-			GL11.glBegin(GL11.GL_LINES);
-			double breakForce = this.breakForce  * resmul + resbase;
-			float rat = (float) (lastForce / breakForce);
-			if (showforce)
-			{
-				if (stretch < 0)
-				{
-					GL11.glColor4f(1 - rat, 1 - rat, 1, 1);
-				} else if (stretch > 0)
-					GL11.glColor4f(1, 1 - rat, 1 - rat, 1);
-			}
-			else
-				GL11.glColor4f(acol.r,acol.g, acol.b, acol.a);
-			GL11.glVertex3d(cam.transformX(a.getPos().x), cam.transformY(a.getPos().y), 0);
-			if (!showforce)
-			{
-				GL11.glColor4f(bcol.r,bcol.g, bcol.b, bcol.a);
-			}
-			GL11.glVertex3d(cam.transformX(b.getPos().x), cam.transformY(b.getPos().y), 0);
-			GL11.glEnd();
-			GL11.glLineWidth(1);
-			GL11.glDisable(GL11.GL_BLEND);
-			GL11.glDisable(GL11.GL_DEPTH_TEST);
-		}
+		return breakForce;
+	}
+
+	public static boolean isShowforce()
+	{
+		return showforce;
+	}
+
+	public double getStretch()
+	{
+		return this.stretch;
+	}
+
+	public double getLastForce()
+	{
+		return this.lastForce;
 	}
 
 	public Shipsel getA()

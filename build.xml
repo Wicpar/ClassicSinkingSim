@@ -47,6 +47,7 @@
 
     <target name="package" depends="compile">
         <zip destfile="${plugin.path}/Plugins/${plugin.id}.zip" basedir="out"/>
+        <zip destfile="Versions/${plugin.version}/${plugin.id}.zip" basedir="out"/>
     </target>
 
 </project>

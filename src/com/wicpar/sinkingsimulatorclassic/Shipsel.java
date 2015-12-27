@@ -3,14 +3,16 @@ package com.wicpar.sinkingsimulatorclassic;
 import com.wicpar.wicparbase.graphics.Color;
 import com.wicpar.wicparbase.graphics.IDrawable;
 import com.wicpar.wicparbase.mech.Base;
+import com.wicpar.wicparbase.physics.IForce;
 import com.wicpar.wicparbase.physics.system.Physical;
+import com.wicpar.wicparbase.utils.Disposable;
 import org.joml.Vector3d;
 import org.lwjgl.opengl.GL11;
 
 /**
  * Created by Frederic on 11/10/2015 at 19:49.
  */
-public class Shipsel extends Physical implements IDrawable
+public class Shipsel extends Physical
 {
 	public static Color WaterColor = new Color(0, 0.25f, 1, 1);
 	private final Material material;
@@ -48,25 +50,6 @@ public class Shipsel extends Physical implements IDrawable
 	}
 
 	@Override
-	public void draw()
-	{
-		forces.stream().filter(force -> force instanceof IDrawable).forEach(force -> ((IDrawable) force).draw());
-		Color set = current.set(material.colour.r * (1 - flooded * trans) + WaterColor.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + WaterColor.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + WaterColor.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + WaterColor.a * (flooded * trans));
-		final Camera cam = Main.ClassicSinkingSim.getInstance().getCam();
-		GL11.glEnable(GL11.GL_DEPTH_TEST);
-		GL11.glEnable(GL11.GL_BLEND);
-		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-		GL11.glPointSize((float)Main.ClassicSinkingSim.getInstance().getCam().scaleSize(0.1));
-		GL11.glBegin(GL11.GL_POINTS);
-		GL11.glColor4f(current.r, current.g, current.b, current.a);
-		GL11.glVertex3d(cam.transformX(pos.x), cam.transformY(pos.y), 0);
-		GL11.glEnd();
-		GL11.glPointSize(1);
-		GL11.glDisable(GL11.GL_BLEND);
-		GL11.glDisable(GL11.GL_DEPTH_TEST);
-	}
-
-	@Override
 	public void UpdateForces(double v)
 	{
 		super.UpdateForces(v);
@@ -75,6 +58,7 @@ public class Shipsel extends Physical implements IDrawable
 			flooded = Math.min(flooded + (float) v / 2, 1);
 		}
 		mass = (float) genMass();
+		current.set(material.colour.r * (1 - flooded * trans) + WaterColor.r * (flooded * trans), material.colour.g * (1 - flooded * trans) + WaterColor.g * (flooded * trans), material.colour.b * (1 - flooded * trans) + WaterColor.b * (flooded * trans), material.colour.a * (1 - flooded * trans) + WaterColor.a * (flooded * trans));
 	}
 
 	private double genMass()
@@ -134,4 +118,10 @@ public class Shipsel extends Physical implements IDrawable
 		return parent;
 	}
 
+	@Override
+	public void dispose()
+	{
+		super.dispose();
+		this.forces.stream().filter(iForce -> iForce instanceof Disposable).forEach(iForce -> ((Disposable) iForce).dispose());
+	}
 }

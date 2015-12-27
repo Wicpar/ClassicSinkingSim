@@ -6,10 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becd9f5b-cbc6-4087-8d44-3d7a0e5756ed" name="Default" comment="">
+    <list default="true" id="becd9f5b-cbc6-4087-8d44-3d7a0e5756ed" name="Default" comment="last comaptible update...">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Versions/0.0.2/SinkingSimulatorClassic.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/ClassicSinkingSim API.jar" afterPath="$PROJECT_DIR$/API/ClassicSinkingSim API.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClassicSinkingSim.iml" afterPath="$PROJECT_DIR$/ClassicSinkingSim.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java" afterPath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java" afterPath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java" afterPath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java" afterPath="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java" />
     </list>
     <ignored path="Test-Plugin-PF4J.iws" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,31 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Sea.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+              <caret line="238" column="43" selection-start-line="238" selection-start-column="43" selection-end-line="238" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7357513">
-              <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+            <state vertical-scroll-proportion="-17.038462">
+              <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -68,9 +64,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,62 +74,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#543#544#0" expanded="false" />
-                <element signature="e#559#560#0" expanded="false" />
-                <element signature="e#601#602#0" expanded="false" />
-                <element signature="e#632#633#0" expanded="false" />
-                <element signature="e#688#689#0" expanded="false" />
-                <element signature="e#727#728#0" expanded="false" />
-                <element signature="e#789#790#0" expanded="false" />
-                <element signature="e#824#825#0" expanded="false" />
-                <element signature="e#894#895#0" expanded="false" />
-                <element signature="e#941#942#0" expanded="false" />
-                <element signature="e#1332#1333#0" expanded="false" />
-                <element signature="e#1394#1395#0" expanded="false" />
-                <element signature="e#1890#1891#0" expanded="false" />
-                <element signature="e#1938#1939#0" expanded="false" />
-                <element signature="e#2311#2312#0" expanded="false" />
-                <element signature="e#2358#2359#0" expanded="false" />
-                <element signature="e#2398#2399#0" expanded="false" />
-                <element signature="e#2445#2446#0" expanded="false" />
-                <element signature="e#2487#2488#0" expanded="false" />
-                <element signature="e#2540#2541#0" expanded="false" />
-                <element signature="e#2582#2583#0" expanded="false" />
-                <element signature="e#2635#2636#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shipsel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Shipsel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="248" selection-start-line="88" selection-start-column="248" selection-end-line="88" selection-end-column="248" />
+            <state vertical-scroll-proportion="0.41421145">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#770#771#0" expanded="false" />
-                <element signature="e#807#808#0" expanded="false" />
-                <element signature="e#859#860#0" expanded="false" />
-                <element signature="e#892#893#0" expanded="false" />
-                <element signature="e#1194#1195#0" expanded="false" />
-                <element signature="e#1229#1230#0" expanded="false" />
-                <element signature="e#2593#2594#0" expanded="false" />
-                <element signature="e#2639#2640#0" expanded="false" />
-                <element signature="e#3433#3434#0" expanded="false" />
-                <element signature="e#3454#3455#0" expanded="false" />
-                <element signature="e#3651#3652#0" expanded="false" />
-                <element signature="e#3672#3673#0" expanded="false" />
-                <element signature="e#3717#3718#0" expanded="false" />
-                <element signature="e#3746#3747#0" expanded="false" />
-                <element signature="e#3781#3782#0" expanded="false" />
-                <element signature="e#3803#3804#0" expanded="false" />
-                <element signature="e#3832#3833#0" expanded="false" />
-                <element signature="e#3853#3854#0" expanded="false" />
-                <element signature="e#3882#3883#0" expanded="false" />
-                <element signature="e#3902#3903#0" expanded="false" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -178,13 +129,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1855#1856#0" expanded="false" />
-                <element signature="e#1930#1931#0" expanded="false" />
-                <element signature="e#2154#2155#0" expanded="false" />
-                <element signature="e#2197#2198#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,17 +179,18 @@
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/CustomWorld.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Stats.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Material.java" />
-        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sky.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java" />
-        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java" />
-        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ground.java" />
-        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java" />
         <option value="$PROJECT_DIR$/Plugin.properties" />
         <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/PropertyManager.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/BatchRenderer.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java" />
+        <option value="$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java" />
       </list>
     </option>
   </component>
@@ -307,6 +253,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassicSinkingSim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Versions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="0.0.2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,21 +706,27 @@
       <option name="project" value="LOCAL" />
       <updated>1451089387629</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="rebuilt the ant build so it doesn't write the pluginID inside the zip file.">
+      <created>1451090709974</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1451090709974</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1924" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29768467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29768467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16433942" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -792,7 +762,9 @@
     <MESSAGE value="tweaked physics" />
     <MESSAGE value="made the mod more modding capable" />
     <MESSAGE value="Made the Property Manager that is going to replace the static vars. Please use this for the future." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the Property Manager that is going to replace the static vars. Please use this for the future." />
+    <MESSAGE value="rebuilt the ant build so it doesn't write the pluginID inside the zip file." />
+    <MESSAGE value="last comaptible update..." />
+    <option name="LAST_COMMIT_MESSAGE" value="last comaptible update..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,29 +786,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="57" selection-start-line="234" selection-start-column="57" selection-end-line="234" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClassicSinkingSim.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plugin.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1058,6 +1007,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,24 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3641#3642#0" expanded="false" />
-            <element signature="e#3656#3657#0" expanded="false" />
-            <element signature="e#3683#3684#0" expanded="false" />
-            <element signature="e#3698#3699#0" expanded="false" />
-            <element signature="e#3736#3737#0" expanded="false" />
-            <element signature="e#3758#3759#0" expanded="false" />
-            <element signature="e#3799#3800#0" expanded="false" />
-            <element signature="e#3884#3885#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_05/jre/lib/rt.jar!/java/lang/Number.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17770036">
@@ -1118,35 +1052,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Camera.java">
+    <entry file="jar://$PROJECT_DIR$/BaseLibs/WicparBase.jar!/com/wicpar/wicparbase/graphics/IDrawable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1184669">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/BaseLibs/WicparBase.jar!/com/wicpar/wicparbase/physics/system/Defaults/Spring.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17770036">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Spring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24132231">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="e#2441#2442#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2506#2507#0" expanded="true" />
+            <element signature="e#2529#2530#0" expanded="true" />
+            <element signature="e#2561#2562#0" expanded="true" />
+            <element signature="e#2587#2588#0" expanded="true" />
+            <element signature="e#2621#2622#0" expanded="true" />
+            <element signature="e#2649#2650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#543#544#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#727#728#0" expanded="false" />
-            <element signature="e#789#790#0" expanded="false" />
-            <element signature="e#824#825#0" expanded="false" />
-            <element signature="e#894#895#0" expanded="false" />
-            <element signature="e#941#942#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-            <element signature="e#1394#1395#0" expanded="false" />
-            <element signature="e#1890#1891#0" expanded="false" />
-            <element signature="e#1938#1939#0" expanded="false" />
-            <element signature="e#2311#2312#0" expanded="false" />
-            <element signature="e#2358#2359#0" expanded="false" />
-            <element signature="e#2398#2399#0" expanded="false" />
-            <element signature="e#2445#2446#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="false" />
-            <element signature="e#2540#2541#0" expanded="false" />
-            <element signature="e#2582#2583#0" expanded="false" />
-            <element signature="e#2635#2636#0" expanded="false" />
-          </folding>
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.038462">
+          <caret line="49" column="83" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1154,53 +1105,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="248" selection-start-line="88" selection-start-column="248" selection-end-line="88" selection-end-column="248" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#770#771#0" expanded="false" />
-            <element signature="e#807#808#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#892#893#0" expanded="false" />
-            <element signature="e#1194#1195#0" expanded="false" />
-            <element signature="e#1229#1230#0" expanded="false" />
-            <element signature="e#2593#2594#0" expanded="false" />
-            <element signature="e#2639#2640#0" expanded="false" />
-            <element signature="e#3433#3434#0" expanded="false" />
-            <element signature="e#3454#3455#0" expanded="false" />
-            <element signature="e#3651#3652#0" expanded="false" />
-            <element signature="e#3672#3673#0" expanded="false" />
-            <element signature="e#3717#3718#0" expanded="false" />
-            <element signature="e#3746#3747#0" expanded="false" />
-            <element signature="e#3781#3782#0" expanded="false" />
-            <element signature="e#3803#3804#0" expanded="false" />
-            <element signature="e#3832#3833#0" expanded="false" />
-            <element signature="e#3853#3854#0" expanded="false" />
-            <element signature="e#3882#3883#0" expanded="false" />
-            <element signature="e#3902#3903#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1855#1856#0" expanded="false" />
-            <element signature="e#1930#1931#0" expanded="false" />
-            <element signature="e#2154#2155#0" expanded="false" />
-            <element signature="e#2197#2198#0" expanded="false" />
-          </folding>
+          <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1208,14 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1230,10 +1135,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Sea.java">
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/ShipBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -1241,16 +1146,35 @@
     <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+          <caret line="238" column="43" selection-start-line="238" selection-start-column="43" selection-end-line="238" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="jar://$PROJECT_DIR$/BaseLibs/WicparBase.jar!/com/wicpar/wicparbase/physics/system/Physical.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7357513">
-          <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.18466899">
+          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/wicpar/sinkingsimulatorclassic/Shipsel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41421145">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding>
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

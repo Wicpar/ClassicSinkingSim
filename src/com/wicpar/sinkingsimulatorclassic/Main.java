@@ -158,35 +158,7 @@ public class Main extends Plugin
 						yp = cam.untransformY(yp);
 						if (button == 0 && action == 1)
 						{
-
-
-						/*
-						int iter = 0;
-
-						while (iter < 100)
-						{
-							Shipsel s = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp, yp);
-							Shipsel t = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp + 1, yp);
-							Shipsel u = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp + 1, yp + 1);
-							Shipsel v = new Shipsel(Material.fromColor(Color.valueOf("E0D8C0").toString()), xp, yp + 1);
-							Base.getClassHandler().addClass(s);
-							Base.getClassHandler().addClass(t);
-							Base.getClassHandler().addClass(u);
-							Base.getClassHandler().addClass(v);
-
-							Spring a = new Spring(s, t, true);
-							Spring b = new Spring(t, u, true);
-							Spring c = new Spring(u, v, true);
-							Spring d = new Spring(v, s, true);
-							Spring e = new Spring(s, u, true);
-							Spring f = new Spring(t, v, true);
-							iter++;
-
-							//ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size()))
-						}*/
-
 							ShipBuffer.ScheduleShip(ShipBuffer.getAvaliableShips().get(new Random().nextInt(ShipBuffer.getAvaliableShips().size())), new Vector3d(xp, yp, 0));
-
 						}
 						if (button == 1 && action == 1)
 						{
